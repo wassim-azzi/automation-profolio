@@ -464,3 +464,29 @@ footer p{
     margin-bottom:12px;
 
 }
+.buttons{
+
+    margin-top:35px;
+
+}
+
+.tech-stack{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:40px;
+
+}
+
+.tech-stack span{
+
+    background:#1E293B;
+    color:#38BDF8;
+    border:1px solid #38BDF8;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:14px;
+
+}
