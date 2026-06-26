@@ -634,3 +634,14 @@ footer p{
     color:#CBD5E1;
 
 }
+section{
+
+    position:relative;
+
+}
+
+section:not(:last-child){
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+
+}
