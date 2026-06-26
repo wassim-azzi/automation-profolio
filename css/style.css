@@ -645,3 +645,24 @@ section:not(:last-child){
     border-bottom:1px solid rgba(255,255,255,.04);
 
 }
+/* ===========================
+   Scroll Animation
+=========================== */
+
+section{
+
+    opacity:0;
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+section.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
