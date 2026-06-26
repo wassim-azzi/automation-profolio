@@ -399,3 +399,15 @@ footer p{
     color:#38BDF8;
 
 }
+.tag{
+
+    display:inline-block;
+    background:#38BDF8;
+    color:#0B1120;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:18px;
+
+}
