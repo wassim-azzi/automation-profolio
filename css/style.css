@@ -560,3 +560,36 @@ footer p{
     font-size:14px;
 
 }
+/* About Page */
+
+.about-page{
+
+    padding:160px 0 100px;
+
+    text-align:center;
+
+}
+
+.about-page h1{
+
+    font-size:56px;
+
+    color:#38BDF8;
+
+    margin-bottom:35px;
+
+}
+
+.intro{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#CBD5E1;
+
+}
