@@ -449,3 +449,18 @@ footer p{
     font-size:18px;
 
 }
+.lessons{
+
+    max-width:800px;
+    margin:auto;
+    color:#CBD5E1;
+    line-height:2;
+    font-size:18px;
+
+}
+
+.lessons li{
+
+    margin-bottom:12px;
+
+}
