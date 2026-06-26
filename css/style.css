@@ -354,3 +354,24 @@ margin-bottom:15px;
 color:#CBD5E1;
 
 }
+/* Footer */
+
+footer{
+
+    padding:40px 0;
+
+    background:#0B1120;
+
+    border-top:1px solid #334155;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:#94A3B8;
+
+    margin:8px;
+
+}
