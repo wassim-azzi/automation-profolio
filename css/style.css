@@ -306,19 +306,25 @@ nav a:hover{
     background:#1E293B;
     padding:30px;
     border-radius:18px;
-    transition:.3s;
     border:1px solid #334155;
-    transition:all .3s ease;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
 
 }
 
 .card:hover{
 
-    transform:translateY(-8px);
-    border-color:#38BDF8;
-    box-shadow:0 10px 30px rgba(56,189,248,.2);
-    cursor:pointer;
+    transform:
+        translateY(-12px)
+        scale(1.02);
 
+    border-color:#38BDF8;
+
+    box-shadow:
+        0 20px 45px rgba(56,189,248,.20);
 
 }
 
@@ -665,4 +671,51 @@ section.show{
     opacity:1;
     transform:translateY(0);
 
+}
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(56,189,248,.12);
+
+    filter:blur(120px);
+
+    top:120px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:0;
+
+}
+
+.hero{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.hero .container{
+
+    position:relative;
+    z-index:1;
+
+}
+nav a.active{
+
+    color:#38BDF8;
+}
+
+nav a.active::after{
+
+    width:100%;
 }
