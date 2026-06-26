@@ -1,1 +1,124 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0B1120;
+    color:#F8FAFC;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:#111827;
+    border-bottom:1px solid #1F2937;
+    z-index:1000;
+}
+
+.nav-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:75px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38BDF8;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38BDF8;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    color:#38BDF8;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#CBD5E1;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.primary{
+    background:#38BDF8;
+    color:white;
+}
+
+.primary:hover{
+    background:#0EA5E9;
+}
+
+.secondary{
+    border:2px solid #38BDF8;
+    color:#38BDF8;
+}
+
+.secondary:hover{
+    background:#38BDF8;
+    color:white;
+}
