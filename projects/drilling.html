@@ -38,8 +38,8 @@
         <h2>Industrial Automation Project</h2>
 
         <p>
-            Electro-pneumatic automated drilling station designed using
-            FluidSIM and GRAFCET with relay logic control.
+            Pneumatic automated drilling station designed using
+            FluidSIM and GRAFCET.
         </p>
 
     </div>
@@ -66,15 +66,10 @@
 
 <p>
 
-This project simulates an automated drilling station used in
-industrial production.
-
-The control sequence was developed using GRAFCET and implemented
-using electro-pneumatic relay logic in FluidSIM.
-
-The system automatically clamps the workpiece, performs the drilling
-operation, waits for a predefined drilling time, and safely returns
-to its initial state.
+The Automated Drilling Station is a pneumatic automation project
+designed and simulated using FluidSIM Pneumatics.
+It automates the complete drilling cycle,
+from workpiece detection and clamping to drilling and release.
 
 </p>
 
@@ -93,7 +88,7 @@ to its initial state.
             Manual drilling operations in manufacturing environments are
             repetitive, time-consuming and may lead to positioning errors.
 
-            An automated electro-pneumatic drilling station increases
+            An automated Pneumatic drilling station increases
             productivity, improves repeatability and enhances operator safety
             by executing the complete drilling cycle automatically.
 
@@ -146,13 +141,18 @@ to its initial state.
         <div class="project-grid">
 
             <div class="card">
+                <h3>System Type</h3>
+                <p>Pneumatic</p>
+            </div>
+
+            <div class="card">
                 <h3>Software</h3>
                 <p>FluidSIM</p>
             </div>
 
             <div class="card">
                 <h3>Control Method</h3>
-                <p>Relay Logic</p>
+                <p>Sequential pneumatic control</p>
             </div>
 
             <div class="card">
@@ -163,11 +163,6 @@ to its initial state.
             <div class="card">
                 <h3>Actuators</h3>
                 <p>2 Double-Acting Pneumatic Cylinders</p>
-            </div>
-
-            <div class="card">
-                <h3>Sensors</h3>
-                <p>Limit Switches</p>
             </div>
 
             <div class="card">
@@ -190,6 +185,11 @@ to its initial state.
         <div class="project-grid">
 
             <div class="card">
+                <h3>Air Preparation Unit (FRL)</h3>
+                <p>Filters, regulates, and lubricates the compressed air.</p>
+            </div>
+
+            <div class="card">
                 <h3>Double-Acting Cylinders</h3>
                 <p>Two pneumatic cylinders for clamping and drilling movements.</p>
             </div>
@@ -200,23 +200,33 @@ to its initial state.
             </div>
 
             <div class="card">
-                <h3>Limit Switches</h3>
-                <p>Position feedback for each stage of the sequence.</p>
+                <h3>3/2 Mechanically Actuated Valves</h3>
+                <p>Detect the workpiece and the end positions of Cylinders A and B.</p>
             </div>
 
             <div class="card">
-                <h3>Relay Logic</h3>
-                <p>Controls the complete operating sequence.</p>
+                <h3>3/2 Push Button</h3>
+                <p>Starts the cycle.</p>
             </div>
 
             <div class="card">
-                <h3>Timer Relay</h3>
+                <h3>2/n Way Valve</h3>
+                <p>Pneumatic logic AND element that ensures required conditions are satisfied before the next operation.</p>
+            </div>
+
+            <div class="card">
+                <h3>ON-Delay Timer</h3>
                 <p>Maintains the drilling operation for 3 seconds.</p>
             </div>
 
             <div class="card">
-                <h3>Electric Motor</h3>
-                <p>Represents the drilling spindle during the machining process.</p>
+                <h3>Off-Delay Timer</h3>
+                <p>Maintains the output signal for 1 second.</p>
+            </div>
+
+            <div class="card">
+                <h3>Drill Motor</h3>
+                <p>Performs drilling.</p>
             </div>
 
         </div>
@@ -233,25 +243,19 @@ to its initial state.
 
     <ol>
 
-    <li>Operator places the workpiece.</li>
+    <li>The operator places the workpiece and presses the Start push button.</li>
 
-    <li>Press the Start push button.</li>
+    <li>The presence of the workpiece is detected, and Cylinder A extends to clamp it.</li>
 
-    <li>Cylinder A clamps the workpiece.</li>
+    <li>Cylinder B moves downward, bringing the drilling tool into contact with the workpiece.</li>
 
-    <li>Cylinder B moves downward.</li>
+    <li>The drilling motor starts and drills for 3 seconds.</li>
 
-    <li>The drilling motor starts.</li>
+    <li>After the delay, the motor stops and Cylinder B retracts to its initial position.</li>
 
-    <li>The drilling operation lasts 3 seconds.</li>
+    <li>Cylinder A retracts, releasing the drilled workpiece.</li>
     
-    <li>The motor stops.</li>
-
-    <li>Cylinder B returns to its initial position.</li>
-
-    <li>Cylinder A releases the workpiece.</li>
-
-    <li>The system returns to the waiting state.</li>
+    <li>The station returns to its initial state, ready for the next cycle.</li>
 
     </ol>
 
@@ -266,8 +270,9 @@ to its initial state.
         <h2>GRAFCET</h2>
 
         <p style="text-align:center; margin-bottom:30px;">
-            The GRAFCET defines the sequential logic of the automated
-            drilling station, ensuring a safe and repeatable operating cycle.
+            The GRAFCET represents the sequential control of the drilling station. 
+            Each transition corresponds to a sensor signal or the completion of a previous operation,
+            ensuring that the drilling cycle proceeds safely and in the correct order.
         </p>
 
         <img
@@ -285,8 +290,11 @@ to its initial state.
         <h2>Pneumatic Circuit</h2>
 
         <p style="text-align:center; margin-bottom:30px;">
-            Electro-pneumatic circuit developed in FluidSIM to control the
-            automated drilling sequence.
+            The pneumatic circuit consists of compressed-air preparation components, 
+            directional control valves, sensors, and two double-acting cylinders. 
+            Cylinder A performs the clamping operation, while Cylinder B controls the vertical movement of the drilling tool. 
+            Directional valves and sensors coordinate the sequence,
+            ensuring each actuator moves only after the previous operation has been completed.
         </p>
 
         <img src="../images/drilling/drilling-pneumatic.png"
@@ -419,11 +427,11 @@ to its initial state.
 
         <ul class="lessons">
 
-            <li>Designed an electro-pneumatic control system.</li>
+            <li>Improved understanding of industrial pneumatic automation.</li>
+
+            <li>Developed skills in pneumatic circuit design.</li>
 
             <li>Applied the GRAFCET methodology to sequence operations.</li>
-
-            <li>Implemented relay logic in FluidSIM.</li>
 
             <li>Integrated timers into the drilling cycle.</li>
 
