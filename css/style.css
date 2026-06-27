@@ -45,16 +45,27 @@ nav{
 }
 
 .nav-content{
-    display:flex;
-    justify-content:space-between;
+
+    display:grid;
+
+    grid-template-columns:1fr auto 1fr;
+
     align-items:center;
+
     height:75px;
+
 }
 
 nav ul{
+
+    justify-self:center;
+
     display:flex;
-    gap:30px;
+
+    gap:35px;
+
     list-style:none;
+
 }
 
 nav a{
@@ -515,9 +526,7 @@ footer p{
 }
 .logo{
 
-    font-size:28px;
-    font-weight:700;
-    color:white;
+    justify-self:start;
 
 }
 
