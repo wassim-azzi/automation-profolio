@@ -846,3 +846,14 @@ nav a.active::after{
     }
 
 }
+.diagram-image{
+
+    width:100%;
+    max-width:1000px;
+    display:block;
+    margin:40px auto;
+    border-radius:15px;
+    border:1px solid #334155;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
