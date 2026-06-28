@@ -1,1 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Drilling Station | Wassim Aazzi</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
+<body>
+
+<nav>
+    <div class="container nav-content">
+
+        <div class="logo">
+            <span class="wa">WA</span>
+            <small>Automation</small>
+        </div>
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+
+        </ul>
+
+    </div>
+</nav>
+    
+<section class="hero">
+
+    <div class="container">
+
+        <h1>🚀 Pick & Place</h1>
+
+        <h2>Industrial Automation Project</h2>
+
+        <p>
+            Electro-Pneumatic automated Pick and Place using
+            FluidSIM and Electrical control schematic.
+        </p>
+
+    </div>
+
+</section>
+    
+<section class="project-banner">
+
+    <div class="container">
+
+        <img src="../images/drilling/driling.png"
+             alt="Automated Drilling Station"
+             class="banner-image">
+
+    </div>
+
+</section>
+
+<section class="about">
+
+<div class="container">
+
+<h2>Project Overview</h2>
+
+<p>
+
+The Electro-Pneumatic Pick & Place System is an industrial automation project designed and simulated using FluidSIM.
+The system automatically transfers a workpiece from one position to another
+using pneumatic actuators controlled by an electrical relay logic circuit, improving productivity, precision, and repeatability.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="about">
+
+    <div class="container">
+
+        <h2>Engineering Problem</h2>
+
+        <p>
+
+          Manual pick-and-place operations are repetitive, time-consuming, and prone to positioning errors.
+          This project automates the handling process to reduce operator effort 
+          while ensuring accurate and reliable part transfer.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Project Objectives</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>🎯 Automation</h3>
+                <p>Automate the pick-and-place process.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔒 Safety</h3>
+                <p>Ensure safe and synchronized actuator movements.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚙ Reliability</h3>
+                <p>Reduce manual handling.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧪 Validation</h3>
+                <p>Verify the system using FluidSIM simulation.</p>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<section class="projects">
+
+<div class="container">
+
+        <h2>Technical Specifications</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>System Type</h3>
+                <p>Electro-Pneumatic</p>
+            </div>
+
+            <div class="card">
+                <h3>Software</h3>
+                <p>FluidSIM</p>
+            </div>
+
+            <div class="card">
+                <h3>Control Method</h3>
+                <p>Electrical relay logic</p>
+            </div>
+
+            <div class="card">
+                <h3>Actuators</h3>
+                <p>2 Double-Acting Cylinders + 1 Pneumatic Gripper</p>
+            </div>
+
+            <div class="card">
+                <h3>Status</h3>
+                <p>✅ Completed</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Components Used</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>Air Preparation Unit (FRL)</h3>
+                <p>Filters, regulates, and lubricates the compressed air.</p>
+            </div>
+
+            <div class="card">
+                <h3>Double-Acting Cylinders</h3>
+                <p>Horizontal movement of the gripper, Vertical movement of the gripper, Grasps and releases the workpiece..</p>
+            </div>
+
+            <div class="card">
+                <h3>5/2 Directional Valves</h3>
+                <p>Control the extension and retraction of the cylinders and gripper.</p>
+            </div>
+
+            <div class="card">
+                <h3>Limit Sensors (X0, X1, Y0, Y1, G0, G1)</h3>
+                <p>Detect actuator positions.</p>
+            </div>
+
+            <div class="card">
+                <h3>Relays (K1–K12)</h3>
+                <p>Execute the sequential control logic.</p>
+            </div>
+
+            <div class="card">
+                <h3>2/n Way Valve</h3>
+                <p>Pneumatic logic AND element that ensures required conditions are satisfied before the next operation.</p>
+            </div>
+
+            <div class="card">
+                <h3>Start Push Button</h3>
+                <p>Initiates the automatic cycle.</p>
+            </div>
+
+            <div class="card">
+                <h3>Emergency Stop</h3>
+                <p>Stops the system safely when required.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about">
+    
+    <div class="container">
+
+    <h2>Operating Sequence</h2>
+
+    <ol>
+
+    <li>Press Start to begin the automatic cycle.</li>
+
+    <li>Cylinder X extends to the destination position.</li>
+
+    <li>Cylinder Y extends downward toward the workpiece.</li>
+
+    <li>Gripper G closes to grasp the workpiece.</li>
+
+    <li>Cylinder Y retracts upward.</li>
+
+    <li>Cylinder X retracts to its home position.</li>
+    
+    <li>Cylinder Y extends downward.</li>
+    
+    <li>Gripper G opens to release the workpiece.</li>
+
+    <li>Cylinder Y retracts upward, completing the cycle..</li>
+
+    </ol>
+
+    </div>
+
+</section>
+
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Electrical Control Circuit</h2>
+
+        <p style="text-align:center; margin-bottom:30px;">
+          The electrical control circuit uses relays, push buttons, limit switches, 
+          and solenoid coils to control the electro-pneumatic system. Position sensors provide feedback 
+          to ensure that each actuator completes its movement before the next operation begins, 
+          enabling a safe and reliable automatic pick-and-place sequence.
+        </p>
+
+        <img
+            src="../images/pick_place/pick_place-diagram.png"
+            alt="GRAFCET Diagram"
+            class="banner-image">
+    </div>
+
+</section>
+
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Electro-Pneumatic Circuit</h2>
+
+        <p style="text-align:center; margin-bottom:30px;">
+          The FluidSIM model combines a pneumatic power circuit with an electrical relay control circuit. 
+          Solenoid-operated 5/2 valves actuate the cylinders and gripper, 
+          while limit sensors provide position feedback to the relay logic. 
+          This configuration guarantees that each movement occurs only after the previous step has been completed.
+        </p>
+
+        <img src="../images/pick_place/pick_place-pneumatic.png"
+             class="diagram-image"
+             alt="FluidSIM Pneumatic Circuit">
+
+    </div>
+
+</section>
+    
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Simulation Gallery</h2>
+
+        <p class="gallery-text">
+            Screenshots captured during the FluidSIM simulation showing the
+            different stages of the automated pick & place cycle.
+        </p>
+
+        <div class="gallery">
+
+            <img src="../images/pick_place/simulation/Screenshot (1589).png" alt="Simulation Step 1">
+            <img src="../images/pick_place/simulation/Screenshot (1590).png" alt="Simulation Step 2">
+            <img src="../images/pick_place/simulation/Screenshot (1591).png" alt="Simulation Step 3">
+            <img src="../images/pick_place/simulation/Screenshot (1592).png" alt="Simulation Step 4">
+            <img src="../images/pick_place/simulation/Screenshot (1593).png" alt="Simulation Step 5">
+            <img src="../images/pick_place/simulation/Screenshot (1594).png" alt="Simulation Step 6">
+            <img src="../images/pick_place/simulation/Screenshot (1595).png" alt="Simulation Step 7">
+            <img src="../images/pick_place/simulation/Screenshot (1596).png" alt="Simulation Step 8">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Results</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>Successful Automation</h3>
+                <p>The complete drilling cycle was executed automatically.</p>
+            </div>
+
+            <div class="card">
+                <h3>Reliable Sequence</h3>
+                <p>The operating sequence followed the GRAFCET without conflicts.</p>
+            </div>
+
+            <div class="card">
+                <h3>Simulation Validated</h3>
+                <p>The system was successfully tested and validated in FluidSIM.</p>
+            </div>
+
+            <div class="card">
+                <h3>Safety Achieved</h3>
+                <p>The workpiece was always clamped before drilling began.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    
+<section class="projects">
+
+    <div class="container">
+
+        <h2>Project Files</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+
+                <h3>📄 Report of the project</h3>
+
+                <p>Complete technical documentation of the project.</p>
+
+                <a href="../files/pick_place-pneumatic.pdf" target="_blank">
+                    Download Report
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>⚙️ FluidSIM Project</h3>
+
+                <p>FluidSIM simulation file.</p>
+
+                <a href="../files/pick_place/pick_place.ct" download>
+                    Download FluidSIM
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about">
+
+    <div class="container">
+
+        <h2>Challenges & Solutions</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>Challenge</h3>
+                <p>
+                    Coordinating three actuators
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Solution</h3>
+                <p>
+                  Developed a sequential relay logic circuit that synchronized 
+                  the horizontal cylinder, vertical cylinder, and gripper.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about">
+
+    <div class="container">
+
+        <h2>Lessons Learned</h2>
+
+        <ul class="lessons">
+
+            <li>Designing electro-pneumatic automation systems.</li>
+
+            <li>Developing sequential control using relay logic.</li>
+
+            <li>Integrating electrical sensors with pneumatic actuators.</li>
+          
+            <li>Understanding the interaction between electrical control and pneumatic power.</li>
+
+            <li>Validated the complete operating sequence through simulation.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="projects">
+
+    <div class="container" style="text-align:center;">
+
+        <a href="../projects.html" class="btn primary">
+            ← Back to Projects
+        </a>
+
+    </div>
+
+</section>
+
+<script src="../script.js"></script>
+    
+</body>
+</html>
