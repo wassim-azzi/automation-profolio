@@ -184,48 +184,33 @@
         <div class="project-grid">
 
             <div class="card">
-                <h3>Air Preparation Unit (FRL)</h3>
-                <p>Filters, regulates, and lubricates the compressed air.</p>
+                <h3>Siemens PLC</h3>
+                <p>Executes the ladder logic program.</p>
             </div>
 
             <div class="card">
-                <h3>Double-Acting Cylinders</h3>
-                <p>Two pneumatic cylinders for clamping and drilling movements.</p>
+                <h3>Conveyor Belt</h3>
+                <p>Transports workpieces through the system.</p>
             </div>
 
             <div class="card">
-                <h3>5/2 Directional Valves</h3>
-                <p>Used to control the extension and retraction of each cylinder.</p>
+                <h3>Color Sensor</h3>
+                <p>Detects the color of each workpiece.</p>
             </div>
 
             <div class="card">
-                <h3>3/2 Mechanically Actuated Valves</h3>
-                <p>Detect the workpiece and the end positions of Cylinders A and B.</p>
+                <h3>Presence Sensors</h3>
+                <p>Detect the position of workpieces.</p>
             </div>
 
             <div class="card">
-                <h3>3/2 Push Button</h3>
-                <p>Starts the cycle.</p>
+                <h3>Start / Stop Push Buttons</h3>
+                <p>Control system operation.</p>
             </div>
 
             <div class="card">
-                <h3>2/n Way Valve</h3>
-                <p>Pneumatic logic AND element that ensures required conditions are satisfied before the next operation.</p>
-            </div>
-
-            <div class="card">
-                <h3>ON-Delay Timer</h3>
-                <p>Maintains the drilling operation for 3 seconds.</p>
-            </div>
-
-            <div class="card">
-                <h3>Off-Delay Timer</h3>
-                <p>Maintains the output signal for 1 second.</p>
-            </div>
-
-            <div class="card">
-                <h3>Drill Motor</h3>
-                <p>Performs drilling.</p>
+                <h3>Pivot arm sorter</h3>
+                <p>Sort workpieces according to their detected color.</p>
             </div>
 
         </div>
@@ -242,20 +227,18 @@
 
     <ol>
 
-    <li>The operator places the workpiece and presses the Start push button.</li>
+    <li>Press the Start button.</li>
 
-    <li>The presence of the workpiece is detected, and Cylinder A extends to clamp it.</li>
+    <li>The conveyor transports the workpiece.</li>
 
-    <li>Cylinder B moves downward, bringing the drilling tool into contact with the workpiece.</li>
+    <li>The color sensor detects the workpiece color.</li>
 
-    <li>The drilling motor starts and drills for 3 seconds.</li>
+    <li>The PLC processes the detected color.</li>
 
-    <li>After the delay, the motor stops and Cylinder B retracts to its initial position.</li>
+    <li>The corresponding actuator diverts the workpiece.</li>
 
-    <li>Cylinder A retracts, releasing the drilled workpiece.</li>
+    <li>The cycle repeats automatically.</li>
     
-    <li>The station returns to its initial state, ready for the next cycle.</li>
-
     </ol>
 
     </div>
@@ -269,9 +252,7 @@
         <h2>GRAFCET</h2>
 
         <p style="text-align:center; margin-bottom:30px;">
-            The GRAFCET represents the sequential control of the drilling station. 
-            Each transition corresponds to a sensor signal or the completion of a previous operation,
-            ensuring that the drilling cycle proceeds safely and in the correct order.
+            Developed the sequential control logic of the sorting and storage process.
         </p>
 
         <img
@@ -286,14 +267,12 @@
 
     <div class="container">
 
-        <h2>Pneumatic Circuit</h2>
+        <h2>PLC Program (Ladder Logic)</h2>
 
         <p style="text-align:center; margin-bottom:30px;">
-            The pneumatic circuit consists of compressed-air preparation components, 
-            directional control valves, sensors, and two double-acting cylinders. 
-            Cylinder A performs the clamping operation, while Cylinder B controls the vertical movement of the drilling tool. 
-            Directional valves and sensors coordinate the sequence,
-            ensuring each actuator moves only after the previous operation has been completed.
+            The automation logic was developed using Siemens STEP 7 in Ladder Diagram (LAD). 
+            The PLC continuously monitors sensor inputs, determines the workpiece color, 
+            controls the conveyor, and activates the appropriate actuator to ensure accurate sorting and storage.
         </p>
 
         <img src="../images/drilling/drilling-pneumatic.png"
@@ -308,11 +287,13 @@
 
     <div class="container">
 
-        <h2>Simulation Gallery</h2>
+        <h2>Factory I/O Simulation</h2>
 
         <p class="gallery-text">
-            Screenshots captured during the FluidSIM simulation showing the
-            different stages of the automated drilling cycle.
+           The automation system was simulated in Factory I/O, 
+            allowing the complete production process to be tested in a virtual industrial environment. 
+            The simulation verified the interaction between the PLC program, sensors, conveyor system, 
+            actuators, and storage stations before real-world implementation.
         </p>
 
         <div class="gallery">
@@ -342,24 +323,24 @@
 
             <div class="card">
                 <h3>Successful Automation</h3>
-                <p>The complete drilling cycle was executed automatically.</p>
+                <p>The complete sorting and storage process was executed automatically.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Accurate Color Detection</h3>
+                <p>Each workpiece was correctly identified according to its color.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Reliable Sorting</h3>
+                <p>The Ladder Logic program was successfully tested using Siemens STEP 7 and Factory I/O.</p>
             </div>
 
             <div class="card">
-                <h3>Reliable Sequence</h3>
-                <p>The operating sequence followed the GRAFCET without conflicts.</p>
+                <h3>Continuous Operation</h3>
+                <p>The system processed consecutive workpieces automatically without operator intervention.</p>
             </div>
-
-            <div class="card">
-                <h3>Simulation Validated</h3>
-                <p>The system was successfully tested and validated in FluidSIM.</p>
-            </div>
-
-            <div class="card">
-                <h3>Safety Achieved</h3>
-                <p>The workpiece was always clamped before drilling began.</p>
-            </div>
-
+            
         </div>
 
     </div>
@@ -415,16 +396,17 @@
             <div class="card">
                 <h3>Challenge</h3>
                 <p>
-                    During testing, Cylinder B restarted unexpectedly after returning
-                    to its initial position.
+                    Incorrect sorting caused by overlapping workpieces
                 </p>
             </div>
 
             <div class="card">
                 <h3>Solution</h3>
                 <p>
-                    The control sequence was revised to eliminate the repeated trigger,
-                    ensuring that each movement is executed only once per cycle.
+                    When multiple workpieces were detected in succession, a downstream pivot arm could be activated 
+                    before the previous workpiece had passed it. This caused the first workpiece to be diverted onto the wrong conveyor. 
+                    To solve this, individual time delays were added to each pivot arm, 
+                    ensuring that every actuator was activated only when its corresponding workpiece reached the correct sorting position.
                 </p>
             </div>
 
@@ -442,17 +424,17 @@
 
         <ul class="lessons">
 
-            <li>Improved understanding of industrial pneumatic automation.</li>
+            <li>Translating GRAFCET into Ladder Logic (LAD) with Siemens STEP 7.</li>
 
-            <li>Developed skills in pneumatic circuit design.</li>
+            <li>Improved understanding of PLC programming using Siemens STEP 7 (LAD).</li>
 
-            <li>Applied the GRAFCET methodology to sequence operations.</li>
+            <li>Integrating a PLC program with Factory I/O for virtual commissioning.</li>
 
-            <li>Integrated timers into the drilling cycle.</li>
+            <li>Synchronizing sensors, conveyors, and pivot arms for reliable operation.</li>
 
-            <li>Troubleshot and corrected an unexpected cylinder restart during testing.</li>
+            <li>Industrial sorting and storage automation.</li>
 
-            <li>Validated the complete operating sequence through simulation.</li>
+            <li>Debugging and optimizing PLC programs through simulation.</li>
 
         </ul>
 
