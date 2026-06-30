@@ -902,3 +902,17 @@ nav a.active::after{
     margin:auto;
 
 }
+.simulation-video{
+
+    width:100%;
+    max-width:1000px;
+
+    display:block;
+    margin:40px auto;
+
+    border-radius:20px;
+    border:1px solid #334155;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
