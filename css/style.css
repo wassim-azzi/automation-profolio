@@ -536,9 +536,8 @@ footer p{
 
 .logo img{
 
-    width:100px;
-    height:100px;
-    border:2px solid red;
+    height:70px;
+    width:auto;
 
 }
 
