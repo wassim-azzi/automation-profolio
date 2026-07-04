@@ -525,9 +525,18 @@ footer p{
 
 }
 .logo{
-
     justify-self:start;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:24px;
+    font-weight:700;
+    color:white;
+}
 
+.logo img{
+    height:42px;
+    width:auto;
 }
 
 .logo span{
