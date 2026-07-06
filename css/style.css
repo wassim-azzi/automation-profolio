@@ -148,25 +148,6 @@ nav a.active::after{
     width:100%;
 }
 
-/* ===========================
-   Section eyebrow (drawing-style figure labels)
-   Add: <h2 data-eyebrow="FIG. 02">Title</h2>
-=========================== */
-
-h2[data-eyebrow]{
-    position:relative;
-}
-
-h2[data-eyebrow]::before{
-    content:attr(data-eyebrow);
-    display:block;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    font-weight:500;
-    letter-spacing:2.5px;
-    color:var(--amber);
-    margin-bottom:14px;
-}
 
 /* ===========================
    HERO SECTION
