@@ -201,10 +201,6 @@ nav a.active::after{
     margin-bottom:26px;
 }
 
-.hero h2::before{
-    content:"> ";
-    color:var(--amber);
-}
 
 .hero p{
     max-width:720px;
