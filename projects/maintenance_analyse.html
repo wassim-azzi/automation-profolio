@@ -203,6 +203,15 @@
                 font-size:12px;
             }
         }
+
+        /* Force this section visible regardless of the scroll-reveal
+           script — it's much taller than the viewport, so a
+           "% visible" intersection trigger may never fire on it. */
+        section.nb-section{
+            opacity:1 !important;
+            transform:none !important;
+            transition:none !important;
+        }
     </style>
 </head>
 <body>
@@ -409,7 +418,7 @@
 
 </section>
 
-<section class="projects">
+<section class="projects nb-section">
 
     <div class="container">
 
